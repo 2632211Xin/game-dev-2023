@@ -24,6 +24,12 @@
   <p>A Bichon Frisé  from French: bichon à poil frisé, French pronunciation: ​[biʃɔ̃ fʁize], meaning 'curly haired dog, is a small breed of dog of the bichon type.</p>
 </div>
 
+<div id="example 2">
+  <h1>animation-direction: alternate</h1>
+
+<p>Play the animation forwards first, then backwards:</p>
+</div>
+
 
 </body>
 
@@ -36,6 +42,23 @@
   background: url(https://www.goodfreephotos.com/albums/canada/alberta/jasper-national-park/fog-on-the-high-mountains-with-trees-in-jasper-national-park-alberta-canada.jpg);
   background-repeat: no-repeat;
   background-size: auto;
+}
+
+  #example 2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
+}
+
+@keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
 }
 
 </style>
