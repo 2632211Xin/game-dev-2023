@@ -1,9 +1,10 @@
 <script>
 
 function myPrint(x){
-Let myAnimal = 'cat'
-if (x <3){myAnimal = 'kitten'}
-document.write('The' + myAnimal + ' is ' + x + "years old')
+let myAnimal = 'cat'
+for(i=1; i<x; i++){
+if (i <3){myAnimal = 'kitten'}
+document.write('The' + myAnimal + ' is ' + i + "years old')
 }
 
 myPrint(1)
