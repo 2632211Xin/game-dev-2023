@@ -1,1 +1,7 @@
+<script>
 
+function myPrint(){
+document.write('Hello World')
+}
+
+</script>
