@@ -1,3 +1,4 @@
+<html>
 <script>
 
 function myPrint(x){
@@ -10,3 +11,4 @@ document.write('The' + myAnimal + ' is ' + i + "years old')
 myPrint(1)
 
 </script>
+</html>
