@@ -1,7 +1,11 @@
 <script>
 
-function myPrint(){
-document.write('Hello World')
+function myPrint(x){
+Let myAnimal = 'cat'
+if (x <3){myAnimal = 'kitten'}
+document.write('The' + myAnimal + ' is ' + x + "years old')
 }
+
+myPrint(7)
 
 </script>
