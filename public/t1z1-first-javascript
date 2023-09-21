@@ -6,6 +6,6 @@ if (x <3){myAnimal = 'kitten'}
 document.write('The' + myAnimal + ' is ' + x + "years old')
 }
 
-myPrint(7)
+myPrint(1)
 
 </script>
