@@ -5,24 +5,23 @@
 
   <script>
 
-  let myZombie = {
-  'zombie' : 'true' ,
-  'name'   : 'Jon',
-  }
-  let myHuman = {
-  'zonbie' : 'false'
-  'name'   : 'Dan'
-  }
+  let myThingName = ['Jon','Dan','Fred']
+  let myThingZombie = [ture, false, ture]
+    
   </script>
 
   Is <select id="mySelect01"   size=1 onChange="{
-  myInput = documentgetElementById('mySelect01').value
-    if (myZombie.name == myInput && myZombie.zombie){
-       document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
-       } else if (myHuman.name == myInput && myHuman.zombie){
+  myInput = document.getElementById('mySelect01').value
+   for (myLoop=0; myLoop < 4; myloop++){
+       if (myThingName[myLoop] == myInput){
+       if (myThingZombie[myLoop]{
        document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
        } else {
-       document.getElementById('myDiv01').innerHTML = myInput + ' is NOt a Zombie'
+       document.getElementById('myDiv01').innerHTML = myInput + ' is Not a zombie'
+
+       }
+       }
+       }
        }">
     <option>
     <option>Jon
