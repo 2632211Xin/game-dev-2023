@@ -5,30 +5,32 @@
 
   <script>
 
-let myZombie = {
+  let myZombie = {
   'zombie' : 'true' ,
   'name'   : 'Jon',
   }
-
   let myHuman = {
   'zonbie' : 'false'
   'name'   : 'Dan'
   }
-
-    
   </script>
 
-  Is <select size=1>
+  Is <select id="mySelect01"   size=1 onChange="{
+  myInput = documentgetElementById('mySelect01').value
+    if (myZombie.name == myInput && myZombie.zombie){
+       document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
+       } else if (myHuman.name == myInput && myHuman.zombie){
+       document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
+       } else {
+       document.getElementById('myDiv01').innerHTML = myInput + ' is NOt a Zombie'
+       }">
+    <option>
     <option>Jon
     <option>Dan
-  </select> a Zombie?<br>
+  </select> a Zombie? Really!<br>
   
-  <input type=button value= "Check it" onclick="{
-    
 
-  alert(myZombie.name + ' is a '+ myZombie.zombie)
-     
-  }"><br>
+ 
   <div id="myDiv01">...</div><br>
 
 
