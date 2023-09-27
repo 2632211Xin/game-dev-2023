@@ -4,26 +4,29 @@
   <h3 align=center>T1z02-object-zombie-Xin.html</h3>
 
   <script>
+let myZombie = {
+  'Zombie' : true,
+  'name' : 'Jon'
+}
+  let myHuman = {
+    'Zombie' : false,
+    'name' : 'Dan'
+}
+    </script>
 
-  let myThingName = ['Jon','Dan','Fred']
-  let myThingZombie = [ture, false, ture]
-    
-  </script>
-
-  Is <select id="mySelect01"   size=1 onChange="{
-  myInput = document.getElementById('mySelect01').value
-   for (myLoop=0; myLoop < 4; myloop++){
-       if (myThingName[myLoop] == myInput){
-       if (myThingZombie[myLoop]{
+  Is <select id="mySelect01"  size=1 onChange="{
+       myInput = document.getElementById('mySelect01').value
+       if (myZombie.name == myInput  &&  myZombie.zombie) {
+       document.getElementById('myDiv01').innerHTML  =  myInput + ' is a Zombie'
+       } else if (myHuman.name == myInput  &&  myHuman.zombie) {
        document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
        } else {
-       document.getElementById('myDiv01').innerHTML = myInput + ' is Not a zombie'
+       document.getElementById('myDiv01').innerHTML + myInput + ' is NOT a Zombie'
+       }
 
-       }
-       }
-       }
        }">
-    <option>Fred
+    
+    <option>
     <option>Jon
     <option>Dan
   </select> a Zombie? Really!<br>
