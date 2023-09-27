@@ -16,7 +16,7 @@
 
   Is <select id="mySelect01"   size=1 onChange="{
   myInput = document.getElementById('mySelect01').value
-   for (myLoop=0; myLoop < 5; myLoop++){
+   for (myLoop=0; myLoop < myThingName.length; myLoop++){
        if (myThingName[myLoop] == myInput){
          if (myThingZombie[myLoop]){
             document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
