@@ -1,42 +1,48 @@
 <html>
 
-  <head>
+<head>
     <title>T1z03-array-zombie-Xin.html</title>
-  </head>
+</head>
 
 <body>
-  <h3 align=center>T1z03-array-zombie-Xin.html</h3>
+    <h3 align=center>T1z03-array-zombie-Xin.html</h3>
 
-  <script>
+    <script>
+        let myThingName = ['Jon', 'Dan', 'Xin', 'Sam'];
+        let myThingZombie = [true, false, false, true];
+        
+        function checkZombie() {
+            let myInput = document.getElementById('mySelect01').value;
+            let myDiv = document.getElementById('myDiv01');
+            let found = false;
 
-  let myThingName = ['Jon','Dan', 'Xin'.'Sam']
-  let myThingZombie = [true, false, false,true]
-    
-  </script>
+            for (let myLoop = 0; myLoop < myThingName.length; myLoop++) {
+                if (myThingName[myLoop] === myInput) {
+                    if (myThingZombie[myLoop]) {
+                        myDiv.innerHTML = myInput + ' is a Zombie';
+                    } else {
+                        myDiv.innerHTML = myInput + ' is not a zombie';
+                    }
+                    found = true;
+                    break;
+                }
+            }
 
-  Is <select id="mySelect01"   size=1 onChange="{
-  myInput = document.getElementById('mySelect01').value
-   for (myLoop=0; myLoop < 4; myLoop++){
-       if (myThingName[myLoop] == myInput){
-         if (myThingZombie[myLoop]){
-            document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
-       } else {
-            document.getElementById('myDiv01').innerHTML = myInput + ' is Not a zombie'
-              } 
-       
-       break;
-           }
+            if (!found) {
+                myDiv.innerHTML = myInput + ' is not found';
+            }
         }
-     }">
-    <option>
-    <option>Jon
-    <option>Dan
-    <option>Xin
-  </select> a Zombie? Really!<br>
-  
+    </script>
 
- 
-  <div id="myDiv01">...</div><br>
+    Is
+    <select id="mySelect01" size=1 onchange="checkZombie()">
+        <option>Jon</option>
+        <option>Dan</option>
+        <option>Xin</option>
+        <option>Sam</option>
+    </select> a Zombie? Really!<br>
+
+    <div id="myDiv01">...</div><br>
 </body>
 
 </html>
