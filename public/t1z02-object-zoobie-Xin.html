@@ -5,20 +5,20 @@
 
   <script>
 let myZombie = {
-  'Zombie' : true,
+  'zombie' : true,
   'name' : 'Jon'
 }
   let myHuman = {
-    'Zombie' : false,
+    'zombie' : false,
     'name' : 'Dan'
 }
     </script>
 
   Is <select id="mySelect01"  size=1 onChange="{
        myInput = document.getElementById('mySelect01').value
-       if (myZombie.name == myInput  &&  myZombie.Zombie) {
+       if (myZombie.name == myInput  &&  myZombie.zombie) {
        document.getElementById('myDiv01').innerHTML  =  myInput + ' is a Zombie'
-       } else if (myHuman.name == myInput  &&  myHuman.Zombie) {
+       } else if (myHuman.name == myInput  &&  myHuman.zombie) {
        document.getElementById('myDiv01').innerHTML = myInput + ' is a Zombie'
        } else {
        document.getElementById('myDiv01').innerHTML + myInput + ' is NOT a Zombie'
