@@ -1,3 +1,3 @@
-make a model by Blender
-let the model move
-create a simple game like Gluttonous snake
+<li>make a model by Blender</li>
+<li>let the model move</li>
+<li>create a simple game like Gluttonous snake</li>
