@@ -19,13 +19,13 @@ class myPerson {
 
 
   class myZombie {
-     constructor(passName, passAge){
-    this.myName = passName;
-    this.myAge = passAge;
+     constructor(passName1, passAge1){
+    this.myName1 = passName1;
+    this.myAge1 = passAge1;
     }
 
-    myShow(){
-    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '.You are ' + this.myAge + ' years old<br>'
+    myShow1(){
+    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName1 + '.You are ' + this.myAge1 + ' years old<br>'
     }
 }
 
@@ -41,7 +41,7 @@ myCharacter = new myPerson('Elon',52)
   <input type=button value="Class Zombie" onClick="
 
     myCharacter = new myZombie('Frankstein',400)
-    myCharacter.myshow()
+    myCharacter.myshow1()
 
     }">
 
