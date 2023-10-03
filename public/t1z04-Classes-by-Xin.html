@@ -15,14 +15,35 @@ class myPerson {
   }
 }
 
-</script>
+  
 
-<input type=button value="Class Person" onClick="{
+
+  <div> class myZombie {
+     constructor(passName, passAge){
+    this.myName = passName;
+    this.myAge = passAge;
+    }
+
+    myShow(){
+    document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '.You are ' + this.myAge + ' years old<br>'
+    }
+}
+
+    </script>
+
+  <input type=button value="Class Person" onClick="
 
 myCharacter = new myPerson('Elon',52)
   myCharacter.myShow()
   
   }">
+
+  <input type=button value="Class Zombie" onClick="
+
+    myCharacter = new myZombie('Frankstein',400)
+    myCharacter.myshow()
+
+    }">
 
 <div id="myDiv01">...</div>
 
