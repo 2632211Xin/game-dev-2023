@@ -3,26 +3,25 @@
   <h6>Version 0.1.2</h6>
   <h2 align=center>t1a05-input output by Xin</h2>
 
-  <input id="myNum01" type="number" value=""><br>
+  <input id="myNum01" type=number value="" ><br>
 
-  <input type="button" value="myEvent squares" onclick="calculateSquare()"><br>
+  <input type=button value="myEvent squares" onclick="calculateSquare()"><br>
+  
+       function calculateSquare() {
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+      let myAnswer = myIn01 * myIn01
+        document.getElementById('myDiv01').innerHTML =
+          myIn01 + ' squared = ' + myAnswer
+  }
 
   <div id="myDiv01">...</div>
-
-  <script>
-    function calculateSquare() {
-      let myIn01 = parseFloat(document.getElementById('myNum01').value);
-      let myAnswer = myIn01 * myIn01;
-      document.getElementById('myDiv01').innerHTML =
-        myIn01 + ' squared = ' + myAnswer;
-    }
-
-    // Add event listener to the input field to listen for Enter key press
-    document.getElementById('myNum01').addEventListener('keyup', function (event) {
+  
+     document.getElementById('myNum01').addEventListener('keyup', function (event) {
       if (event.key === 'Enter') {
         calculateSquare();
       }
-    });
-  </script>
-
+   }"><br>
+  
+   <div id="myDiv01">...</div>
+  
 </html>
