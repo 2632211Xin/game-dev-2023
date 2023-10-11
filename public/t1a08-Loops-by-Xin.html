@@ -1,4 +1,46 @@
 <html>
+  <head>
+    <title>Version 0.0.1</title>
+  </head>
+  <body>
+    <h2 align="center">t1a08-loops-by-Xin.html</h2>
+    <a href="https://www.w3schools.com/js/js_loop_for.asp">Good reference to JavaScript Loops</a><br>
+    Max loops: <input id="myNum01" type="number" value="4"><br>
+    <input type="button" value="Basic For loop with Decisions" onclick="runLoop()">
+    <div id="myDiv01">...</div>
+
+    <script>
+      function runLoop() {
+        document.getElementById('myDiv01').innerHTML = '';
+        let myTemp = 'I am';
+        let myMax = parseInt(document.getElementById('myNum01').value);
+
+        for (let myLoop = 0; myLoop < myMax; myLoop++) {
+          if (myLoop * 2 > myMax) {
+            myTemp += ' cool ';
+          }
+          myTemp += 'Loop number: ' + myLoop + '<br>';
+        }
+
+        document.getElementById('myDiv01').innerHTML = myTemp;
+      }
+    </script>
+  </body>
+</html>
+Changes made:
+
+Added <head> section with a <title> tag to provide a title for the HTML document.
+Corrected the align="center" attribute in the <h2> tag.
+Moved the JavaScript code to a <script> element within the <body>.
+Created a named JavaScript function runLoop() and updated the onclick attribute to call this function.
+Fixed the variable names (myMax and myLoop) and the capitalization issues in the for loop.
+With these changes, the code should work as expected, displaying the loop results when you click the button.
+
+
+
+
+User
+<html>
 
   <h6>Version 0.0.1</h6>
 
@@ -26,3 +68,7 @@
   <div id="myDiv01">...</div>
   
 </html>
+ChatGPT
+I
+
+
