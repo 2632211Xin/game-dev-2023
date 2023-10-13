@@ -1,18 +1,23 @@
 <html>
+<head>
+    <title>Funcoding-by-Xin.html</title>
+</head>
+<body>
+    <h2 style="text-align: center">Funcoding-by-Xin.html</h2>
 
-  <h2 align=center>Funcoding-by-Xin.html</h2>
+    <input id="myText01" type="text" value="Fred"><br>
+    <input id="myNum01" type="text" value="16"><br>
 
-  <input id = "myText01" type = number value = "Fred"><br>
-    <input id = "myNum01" type = number value = "16"><br>
+    <input type="button" value="Show Data" onclick="showData()"><br>
 
-  <input type = button value = "Show Data" onclick="{
-let myName = document.getElementById('myText01').value
-let myAge = document.getElementById('myNum01').value
+    <div id="myDiv01">...</div><br>
 
-  document.getElementById('myDiv01').innerHTML = 
-  ' Hey ' + myName + ' you are ' + myAge + ' years old '
-  }"><br>
-
-  <div id="myDiv01">...</div><br>
-  
+    <script>
+        function showData() {
+            let myName = document.getElementById('myText01').value;
+            let myAge = document.getElementById('myNum01').value;
+            document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' years old';
+        }
+    </script>
+</body>
 </html>
