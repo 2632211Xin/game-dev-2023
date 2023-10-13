@@ -1,32 +1,43 @@
 <html>
+  <head>
+    <title>Funcoding-by-Xin</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Funcoding-by-Xin.html</h2>
 
-  <h2 align=center>Funcoding-by-Xin.html</h2>
+    <input id="myText01" type="text" value="Fred"><br>
+    <input id="myNum01" type="number" value="16"><br>
 
-  <input id="myText01" type=text value = "Fred"><br>
-  <input id="myNum01" type=number value = "16"><br>
+    <input type="button" value="Show Data" onclick="showData()"><br>
 
-  <input type = button value = "Show Data" onclick="{
-let myName = document.getElementById('myText01').value
-let myAge = document.getElementById('myNum01').value
+    <div id="myDiv01">...</div><br>
 
-  if (myAge < 0){                    
- document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you weren't born'
-  } else if (myAge < 3) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' baby'
-  } else if (myAge < 10) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' kid'
-  } else if (myAge < 20) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' teenager'
-  } else if (myAge < 60) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' adult'
-  } else if (myAge < 100) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' elder person'
-  } else if (myAge < 170) {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' superman'
-  } else {
-    document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you must be a Moster'
-  }"><br>
+    <script>
+      function showData() {
+        let myName = document.getElementById('myText01').value;
+        let myAge = document.getElementById('myNum01').value;
+        let outputMessage = 'Hey ' + myName + ', ';
 
-  <div id="myDiv01">...</div><br>
-  
+        if (myAge < 0) {
+          outputMessage += "you weren't born";
+        } else if (myAge < 3) {
+          outputMessage += 'you are ' + myAge + ' baby';
+        } else if (myAge < 10) {
+          outputMessage += 'you are ' + myAge + ' kid';
+        } else if (myAge < 20) {
+          outputMessage += 'you are ' + myAge + ' teenager';
+        } else if (myAge < 60) {
+          outputMessage += 'you are ' + myAge + ' adult';
+        } else if (myAge < 100) {
+          outputMessage += 'you are ' + myAge + ' elder person';
+        } else if (myAge < 170) {
+          outputMessage += 'you are ' + myAge + ' superman';
+        } else {
+          outputMessage += 'you must be a monster';
+        }
+
+        document.getElementById('myDiv01').innerHTML = outputMessage;
+      }
+    </script>
+  </body>
 </html>
