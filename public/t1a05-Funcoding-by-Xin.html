@@ -11,17 +11,17 @@ Let myAge = parseFloat(document.getElementById('myNum01').value)
 
   if (myAge < 0){                    
  document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you weren't born'
-  } if (myAge > 0 && < 3){
+  } else if (myAge > 0 && < 3){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' baby'
-  } if (myAge > 3 && < 10){
+  } else if (myAge > 3 && < 10){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' kid'
-  } if (myAge > 10 && < 20){
+  } else if (myAge > 10 && < 20){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' teenager'
-  } if (myAge >20 && < 60){
+  } else if (myAge >20 && < 60){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' adult'
-  } if (myAge > 60 && < 100){
+  } else if (myAge > 60 && < 100){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' elder person'
-  } if (myAge > 100 && < 170){
+  } else if (myAge > 100 && < 170){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you are ' + myAge + ' superman'
   } if (myAge > 170){
     document.getElementById('myDiv01').innerHTML = 'Hey ' + myName + ' you must be a Moster'
