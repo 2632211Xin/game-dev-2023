@@ -1,58 +1,44 @@
-    <html>
-    <head>
-    <title> Basic web stuff </title>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html>
+
+    <title>Basic web stuff</title>
+
     <h5>Version 0.0.1</h5>
     
-    <h1 align=center>T3A01-Web-Basics-by-Xin.html </h1>
+    <h1 style="text-align: center">T3A01-Web-Basics-by-Xin.html</h1>
 
     <a href="http://www.google.ca">Link to Google</a><br>
-    
 
     <hr>
-    This is an image <br>
+    This is an image:<br>
     <img src="https://th.bing.com/th/id/OIP.hp-Tsbnv6yy2RrcWRo9mVgHaE8?pid=ImgDet&rs=1"><br><br>
 
-    Youtube Embedded video <br>
-    <iframe width="600" height="400" src="https://www.youtube.com/watch?v=G1hKzCkywM8"
+    YouTube Embedded video:<br>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/G1hKzCkywM8"
     frameborder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
     <hr>
-    <div>this is a </div>
-    <div>div</div>
+    <div>This is a div.</div>
+    <div>Divs can be used for structuring your page.</div>
 
-    <span>This is </span>
-    <span> a span</span>
+    <span>This is a span.</span>
+    <span>Spans are typically used for inline styling.</span>
 
-    <h3> Write about Ellis' 10 main areas of coding</h3>
+    <h3>Write about Ellis' 10 main areas of coding</h3>
 
-    <input type=button value="0. pseudo code" onclick="{
-      document.getElementById('myDiv01').innerHTML = 'Hello don\'t World'
-    }">
+    <input type="button" value="0. Pseudo code" 
+        onclick="document.getElementById('myDiv01').innerHTML = 'Hello, don\'t World'">
 
-    <input type=button value="1. Input/Output" onclick="{
-      document.getElementById('myDiv01').innerHTML = 'Input adffgdsfsgsdfdfg<br>'
-      +'sdfg<br>sdfg<br>output is...'
-    }">
+    <input type="button" value="1. Input/Output" 
+        onclick="document.getElementById('myDiv01').innerHTML = 'Input: adffgdsfsgsdfdfg<br>sdfg<br>sdfg<br>Output is...'"">
 
- <input type=button value="2. variables" onclick="{
-      document.getElementById('myDiv01').innerHTML = ' x = 6 '
-    }">
+    <input type="button" value="2. Variables" 
+        onclick="document.getElementById('myDiv01').innerHTML = 'x = 6'">
         
-    <input type=button value="4. Decisions" onclick="{
-       document.getElementById('myDiv01').innerHTML = `
-      Decisions use the if statement to make ture
-      false variable decisions<br>
-    <pre>
-    if (hour < 18) {
-      greeting = \'Good day\';
-    }
-    </pre>
+    <input type="button" value="4. Decisions" 
+        onclick="document.getElementById('myDiv01').innerHTML = 'Decisions use the if statement to make true or false variable decisions.<br><pre>if (hour < 18) {<br>  greeting = \'Good day\';<br>}</pre>'">
     
     <div id="myDiv01">...</div>
 
-        
-    <body>
-    </html>    
+</html>
