@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <title>Version 0.0.1</title>
@@ -13,25 +12,27 @@
     <div id="myDiv01">...</div>
 
     <script>
+        // Define myAnimal class
         class myAnimal {
-            constructor(passName, passAge) {
-                this.myName = passName;
-                this.myAge = passAge;
+            constructor(name, age) {
+                this.myName = name;
+                this.myAge = age;
             }
 
             myShow() {
-                document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>';
+                document.getElementById('myDiv01').innerHTML = this.myName + ' is a great animal<br>';
             }
         }
 
-       
+        // Function to create and show an instance of myAnimal
         function showAnimal() {
             const myDog = new myAnimal('Snickers', 5);
             myDog.myShow();
         }
 
-       
+        // Function to create and show an instance of myCat
         function showCat() {
+            // Define myCat class extending myAnimal
             class myCat extends myAnimal {
                 myShow() {
                     document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>';
