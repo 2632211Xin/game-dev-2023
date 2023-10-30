@@ -1,44 +1,46 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Version 0.0.1</title>
+</head>
+<body>
+    <h2 align="center">t1a14-extend-class-by-Xin.html</h2>
 
-  <script>
+    <input type="button" value="Example Class Set and Show Class Animal" onClick="showAnimal()">
+    Nothing: <input type="text" id="myText01" value="Useless at the moment"><br>
 
-  class  myAnimal {
-    constructor(passName,passAge) {
-      this.myName = passName;
-      this.myAge = passAge;
-    }
-    myShow(){
-      document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName+'<br>"
-    }
-  }
-  </script>
-  
-Version 0.0.1
-  <h2 align=center>t1a14-extend-class-by-Xin.html</h2>
-  
-<input type=button value="Example Class Set and Show Class Animal" onClick="{
+    <input type="button" value="Example Extend Class Animal" onClick="showCat()">
+    <div id="myDiv01">...</div>
 
-  myDog = new myAnimal('Snickers', 5)
-  myDog.myShow()
+    <script>
+        class myAnimal {
+            constructor(passName, passAge) {
+                this.myName = passName;
+                this.myAge = passAge;
+            }
 
-  }">
+            myShow() {
+                document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName + '<br>';
+            }
+        }
 
-  Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+        // Function to create and show an instance of myAnimal
+        function showAnimal() {
+            const myDog = new myAnimal('Snickers', 5);
+            myDog.myShow();
+        }
 
-  <input type=button value="Example Extend Class Animal" onClick="{
+        // Function to create and show an instance of myCat
+        function showCat() {
+            class myCat extends myAnimal {
+                myShow() {
+                    document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>';
+                }
+            }
 
-    class myCat extends myAnimal {
-    myShow(){
-    document.getElementById('myDiv01').innerHTML = this.myName + ' is a great cat<br>'
-    }
-}
-    
-    myPet = new myCat('Fluffy', 14)
-    myPet.myShow()
-
-    }">
-
-  <div id="myDiv01">...</div>
-  
-  
+            const myPet = new myCat('Fluffy', 14);
+            myPet.myShow();
+        }
+    </script>
+</body>
 </html>
