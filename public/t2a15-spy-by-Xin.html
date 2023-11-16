@@ -31,24 +31,5 @@
 
   <textarea id="myArea03" rows=4 cols=70></textarea><br>
 
-<input type=button value="encrypt" onClick="{
-    let myTemp = ''
-    myString = document.getElementById('myArea01').value.toLowerCase().split('')
-    for (let myLoop=0;  myLoop < myString.length; myLoop++){
-        myTemp = myString[myLoop]
-        if (myString[myLoop] == 'a') {myTemp = 'b'}
-        if (myString[myLoop] == 'b') {myTemp = 'c'}
-        if (myString[myLoop] == 'c') {myTemp = 'd'}
-        if (myString[myLoop] == 'd') {myTemp = 'e'}
-        if (myString[myLoop] == 'e') {myTemp = 'f'}
-        if (myString[myLoop] == 'f') {myTemp = 'g'}
-        if (myString[myLoop] == 'g') {myTemp = 'h'}
-        if (myString[myLoop] == 'h') {myTemp = 'i'}
-        if (myString[myLoop] == 'i') {myTemp = 'j'}
-        if (myString[myLoop] == 'j') {myTemp = 'k'}  
-       myString[myLoop] = myTemp
-    }
-    document.getElementById('myArea02').value = myString.join('')
-  }"><br><br>
 
   
