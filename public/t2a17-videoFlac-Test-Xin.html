@@ -1,14 +1,35 @@
-<h2 align="center">Video Flac Test by Xin</h2>
-  let myName = ['Fred','Tom','Mary']
-<input id="myText01" type=text value=""><br>
+<!DOCTYPE html>
+<html>
 
-<input type=button value "showing answer" onclick="{
-let MyIn = document.getElementById('myText01').value
-for loop{myLoop=0; myLoop < myName.Length; myLoop++}
-                            if( myName = 'Tom','Mary'
-  documentElementById('myDiv01').innerHTML = "good people")
-  else if (myName = 'Fred'
-  document.getElementById('myDiv01').innerHTML = "WoW")
-  }"
-  
-  <div id=myDiv01>...</div>
+<head>
+  <title>Video Flac Test by Xin</title>
+</head>
+
+<body>
+  <h2 align="center">Video Flac Test by Xin</h2>
+
+  <input id="myText01" type="text" value=""><br>
+
+  <input type="button" value="Show Answer" onclick="showAnswer()">
+
+  <div id="myDiv01"></div>
+
+  <script>
+    let myName = ['Fred', 'Tom', 'Mary'];
+
+    function showAnswer() {
+      let myIn = document.getElementById('myText01').value;
+
+      for (let myLoop = 0; myLoop < myName.length; myLoop++) {
+        if (myName[myLoop] === 'Tom' || myName[myLoop] === 'Mary') {
+          document.getElementById('myDiv01').innerHTML = "Good people";
+        } else if (myName[myLoop] === 'Fred') {
+          document.getElementById('myDiv01').innerHTML = "Wow";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
+
