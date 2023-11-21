@@ -20,12 +20,14 @@
     function showAnswer() {
       let myIn = document.getElementById('myText01').value;
 
-      for (let myLoop = 0; myLoop < myName.length; myLoop++) {
-        if (myName[myLoop] === 'Tom' || myName[myLoop] === 'Mary') {
+      if (myName.includes(myIn)) {
+        if (myIn === 'Tom' || myIn === 'Mary') {
           document.getElementById('myDiv01').innerHTML = "Good people";
-        } else if (myName[myLoop] === 'Fred') {
+        } else if (myIn === 'Fred') {
           document.getElementById('myDiv01').innerHTML = "Wow";
         }
+      } else {
+        document.getElementById('myDiv01').innerHTML = "Name not found";
       }
     }
   </script>
