@@ -1,21 +1,12 @@
-<!DOCTYPE html>
 <html>
 
-<head>
-  <title>Video Flac Test by Xin</title>
-</head>
-
-<body>
   <h2 align="center">Video Flac Test by Xin</h2>
+
+    let myName = ['Fred', 'Tom', 'Mary'];
 
   <input id="myText01" type="text" value=""><br>
 
   <input type="button" value="Show Answer" onclick="showAnswer()">
-
-  <div id="myDiv01"></div>
-
-  <script>
-    let myName = ['Fred', 'Tom', 'Mary'];
 
     function showAnswer() {
       let myIn = document.getElementById('myText01').value;
@@ -30,8 +21,9 @@
         document.getElementById('myDiv01').innerHTML = "Name not found";
       }
     }
-  </script>
-</body>
-
+  
+  <div id="myDiv01">...</div>
+  
 </html>
+
 
