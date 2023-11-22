@@ -1,1 +1,29 @@
+<?php
+$myCheck = false;
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$myInputText01 = $_POST['myText01'];
+if ($myInputText01 == 'fred') {
+$myCheck = true;
+}
+}
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Browser Title</title>
+</head>
+<body>
+  <h3 align=center>t2a06-php-codesandbox-Xin</h3>
+  <form action="index.php" method="post">
+    <label for+"myText01">Enter Text:</label>
+    <input type="text" id="myText01" name="myText01">
+    <input type="submit" value="Submit">
+  </form>
+  if ($myCheck ) {echo "<b style='color:green'> Cool! </b>";}
+  else {echo "<span style='color:red'> Try the magic word</span>";}
+  ?>
+</body>
+</html>
