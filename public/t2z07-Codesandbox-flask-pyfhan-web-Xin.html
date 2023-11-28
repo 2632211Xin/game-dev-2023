@@ -25,7 +25,7 @@ return result.stdout
 except Exception as e:
 return f'<h1 style="color:red;">Error: {str(e)}</h1>'
 
-if__name__ == '__main__':
+if __name__ == '__main__':
 app.run(debug=True)
 
 ## this file is called tz07-web.py
@@ -43,7 +43,7 @@ def myRunPy(input_value):
 # return f"Processed: {input_value}"
 return myHTML + input_value
 
-if__name__ == "__main__":
+if __name__ == "__main__":
 input_value = sys.argv[1]  # Get input from command line argument
 result = myRunPy(input_value)
 print(result)
