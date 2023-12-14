@@ -1,7 +1,33 @@
-<h1 align=center>Game</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Game Title</title>
+    <style>
+        body {
+            background-size: auto;
+            background-image: url('https://img.itch.zone/aW1hZ2UvMTUzOTE1NC85MTIyOTcwLmdpZg==/original/AUqhQ2.gif');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Added to stack items vertically */
+        }
 
-<body id="myBody" style="background-size: auto; background-image: url('https://img.itch.zone/aW1hZ2UvMTUzOTE1NC85MTIyOTcwLmdpZg==/original/AUqhQ2.gif')">
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
 
-<input type="button" value="start" onClick="{
- location.href = 'game2-Xin.html'
-}">
+        input {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body id="myBody">
+    <h1>Game Title</h1>
+    <input type="button" value="Start" onClick="location.href = 'game2-Xin.html'">
+</body>
+</html>
