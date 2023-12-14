@@ -13,7 +13,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            flex-direction: column; /* Added to stack items vertically */
+            flex-direction: column;
         }
 
         h1 {
@@ -21,18 +21,19 @@
             margin: 0;
         }
 
-        input { 
+        input {
             position: relative;
-            animation: myfirst 5s repeat;
-            animation-direction: reverse;
+            animation: myfirst 5s infinite;
+            animation-direction: alternate; 
         }
-         myfirst {
-  0%   {background: red; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: blue; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: red; left: 0px; top: 0px;}
-}
+
+        @keyframes myfirst {
+            0%   {  left: -200px; top: 0px; }
+            25%  {  left: 200px; top: 0px; }
+            50%  {  left: 200px; top: 200px; }
+            75%  {  left: -200px; top: 200px; }
+            100% {  left: -200px; top: 0px; }
+        }
     </style>
 </head>
 <body id="myBody">
