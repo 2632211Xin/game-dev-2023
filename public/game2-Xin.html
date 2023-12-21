@@ -46,6 +46,27 @@
       myCheckHit();
     }">
 
+<input type="button" value="🡠" ontouchstart="this.click(); event.preventDefault();"
+    onclick="{
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) +
+      20 + 'px';
+      myCheckHit();
+    }">
+
+    <input type="button" value="🡣" ontouchstart="this.click(); event.preventDefault();"
+    onclick="{
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) +
+      20 + 'px';
+      myCheckHit();
+    }">
+    
+    <input type="button" value="🡩" ontouchstart="this.click(); event.preventDefault();"
+    onclick="{
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) +
+      -20 + 'px';
+      myCheckHit();
+    }">
+
 
  <style>
         body {
