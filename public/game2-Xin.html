@@ -35,9 +35,17 @@
 <input type="button" value="🡢" ontouchstart="this.click(); event.preventDefault();"
     onclick="{
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) +
-      10 + 'px';
+      20 + 'px';
       myCheckHit();
-    }"><br><br>
+    }">
+
+<input type="button" value="🡠" ontouchstart="this.click(); event.preventDefault();"
+    onclick="{
+      document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) +
+      20 + 'px';
+      myCheckHit();
+    }">
+
 
  <style>
         body {
