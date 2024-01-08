@@ -18,15 +18,10 @@
 
     function myCheckHit() {
       if (myHitOther('myImg01', 'myImg02')) {
-        alert('you lose 2');
-        //document.getElementById('myImg01').style.left = '20px';
+        alert('you win');
         location.href = 'https://www.google.ca';
       }
-
-      if (myHitOther('myImg01', 'myImg03')) {
-        alert('you lose 3');
-        //document.getElementById('myImg01').style.left = '20px';
-      }
+     
       if (myHitOther('myImg01', 'myWall')) {
       alert('you lose - hit the wall');
       location.href = 'https://raw.githubusercontent.com/2632211Xin/game-dev-2023/main/public/losepage-Xin.html';
@@ -42,7 +37,7 @@
 <input type="button" value="🡢" ontouchstart="this.click(); event.preventDefault();"
     onclick="{
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) +
-      20 + 'px';
+      40 + 'px';
       myCheckHit();
     }"
    style="position: absolute; top: 830px; left: 980px;">
@@ -50,7 +45,7 @@
 <input type="button" value="🡠" ontouchstart="this.click(); event.preventDefault();"
     onclick="{
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) +
-      -20 + 'px';
+      -40 + 'px';
       myCheckHit();
     }"
   style="position: absolute; top: 830px; left: 900px;">
@@ -58,14 +53,14 @@
     <input type="button" value="🡩" ontouchstart="this.click(); event.preventDefault();"
     onclick="{
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) +
-      -20 + 'px';
+      -40 + 'px';
       myCheckHit();
     }">
 
     <input type="button" value="🡣" ontouchstart="this.click(); event.preventDefault();"
     onclick="{
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) +
-      20 + 'px';
+      40 + 'px';
       myCheckHit();
     }">
 
