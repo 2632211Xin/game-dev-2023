@@ -1,1 +1,37 @@
-Level 2 is still making:)
+import random
+
+class SnackGame:
+    def __init__(self, max_score):
+        self.score = 0
+        self.max_score = max_score
+        self.snacks = ['chocolate', 'popcorn', 'chips', 'cookies', 'candy']
+
+    def display_score(self):
+        print(f"Score: {self.score}/{self.max_score}")
+
+    def eat_snack(self):
+        snack = random.choice(self.snacks)
+        points = random.randint(1, 10)
+        print(f"You ate {snack} and gained {points} points!")
+        self.score += points
+        self.display_score()
+
+    def play(self):
+        while self.score < self.max_score:
+            action = input("Press 'E' to eat a snack, 'Q' to quit: ").upper()
+            if action == 'E':
+                self.eat_snack()
+            elif action == 'Q':
+                print("Quitting the game.")
+                break
+            else:
+                print("Invalid input. Try again.")
+
+        if self.score >= self.max_score:
+            print("Congratulations! You've reached the maximum score!")
+
+if __name__ == "__main__":
+    max_score = 50  # You can adjust this value based on your preference
+    game = SnackGame(max_score)
+    game.play()
+
