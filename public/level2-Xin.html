@@ -1,37 +1,134 @@
-import random
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-class SnackGame:
-    def __init__(self, max_score):
-        self.score = 0
-        self.max_score = max_score
-        self.snacks = ['chocolate', 'popcorn', 'chips', 'cookies', 'candy']
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+    <title>Snake Game</title>
+</head>
+<body>
+    <canvas id="snakeCanvas" width="300" height="300"></canvas>
+    <script>
+        const canvas = document.getElementById('snakeCanvas');
+        const ctx = canvas.getContext('2d');
 
-    def display_score(self):
-        print(f"Score: {self.score}/{self.max_score}")
+        const SQUARE_SIZE = 20;
+        const BOARD_SIZE = 15;
 
-    def eat_snack(self):
-        snack = random.choice(self.snacks)
-        points = random.randint(1, 10)
-        print(f"You ate {snack} and gained {points} points!")
-        self.score += points
-        self.display_score()
+        const snake = [{ x: 5, y: 5 }];
+        let direction = 'right';
 
-    def play(self):
-        while self.score < self.max_score:
-            action = input("Press 'E' to eat a snack, 'Q' to quit: ").upper()
-            if action == 'E':
-                self.eat_snack()
-            elif action == 'Q':
-                print("Quitting the game.")
-                break
-            else:
-                print("Invalid input. Try again.")
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        if self.score >= self.max_score:
-            print("Congratulations! You've reached the maximum score!")
+            // Draw Snake
+            ctx.fillStyle = '#00F';
+            snake.forEach(segment => {
+                ctx.fillRect(segment.x * SQUARE_SIZE, segment.y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+            });
 
-if __name__ == "__main__":
-    max_score = 50  # You can adjust this value based on your preference
-    game = SnackGame(max_score)
-    game.play()
+            // Move Snake
+            const head = { ...snake[0] };
+            switch (direction) {
+                case 'up':
+                    head.y -= 1;
+                    break;
+                case 'down':
+                    head.y += 1;
+                    break;
+                case 'left':
+                    head.x -= 1;
+                    break;
+                case 'right':
+                    head.x += 1;
+                    break;
+            }
 
+            // Check for collision with walls
+            if (head.x < 0 || head.x >= BOARD_SIZE || head.y < 0 || head.y >= BOARD_SIZE) {
+                alert('Game Over! Out of bounds.');
+                resetGame();
+                return;
+            }
+
+            // Check for collision with itself
+            if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+                alert('Game Over! Snake collided with itself.');
+                resetGame();
+                return;
+            }
+
+            // Check for food
+            if (head.x === food.x && head.y === food.y) {
+                snake.unshift({ ...food });
+                placeFood();
+            }
+
+            // Update Snake
+            snake.unshift(head);
+            snake.pop();
+
+            // Draw Food
+            ctx.fillStyle = '#F00';
+            ctx.fillRect(food.x * SQUARE_SIZE, food.y * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
+
+            requestAnimationFrame(draw);
+        }
+
+        function placeFood() {
+            food = {
+                x: Math.floor(Math.random() * BOARD_SIZE),
+                y: Math.floor(Math.random() * BOARD_SIZE)
+            };
+
+            // Ensure food is not placed on the snake
+            while (snake.some(segment => segment.x === food.x && segment.y === food.y)) {
+                food = {
+                    x: Math.floor(Math.random() * BOARD_SIZE),
+                    y: Math.floor(Math.random() * BOARD_SIZE)
+                };
+            }
+        }
+
+        function resetGame() {
+            snake.length = 1;
+            snake[0] = { x: 5, y: 5 };
+            direction = 'right';
+            placeFood();
+        }
+
+        // Handle keyboard input
+        document.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'ArrowUp':
+                    if (direction !== 'down') direction = 'up';
+                    break;
+                case 'ArrowDown':
+                    if (direction !== 'up') direction = 'down';
+                    break;
+                case 'ArrowLeft':
+                    if (direction !== 'right') direction = 'left';
+                    break;
+                case 'ArrowRight':
+                    if (direction !== 'left') direction = 'right';
+                    break;
+            }
+        });
+
+        resetGame();
+        draw();
+    </script>
+</body>
+</html>
